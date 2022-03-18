@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+Our game is Gooravity
+It's a game about saving a goo lost in space
+The player jumps around and manipulates gravity to collect keys and get to the exit.
+-->
+<html>
+<script src="https://www.facebook.com/assets.php/en_US/fbinstant.js"></script>
+<head>
+    <meta charset="utf-8">
+    <title>Gooravity</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1418255535142616',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+
+    // ADD ADDITIONAL FACEBOOK CODE HERE
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script src="./libraries/pixi.min.js"></script>
+<script src="./libraries/howler.min.js"></script>
+<script src="./libraries/viewportSize.min.js"></script>
+
+<script src="./lib/Constants.js"></script>
+<script src="./lib/textures.js"></script>
+
+<script src="./lib/state/state.js"></script>
+<script src="./lib/state/events.js"></script>
+<script src="./lib/SoundController.js"></script>
+
+<script src="./lib/geometry.js"></script>
+
+<script src="./lib/objects/Collectable.js"></script>
+<script src="./lib/objects/Key.js"></script>
+<script src="./lib/objects/Star.js"></script>
+<script src="./lib/objects/ExitDoor.js"></script>
+
+<script src="./lib/objects/Arrow.js"></script>
+
+<script src="./lib/particles/Particle.js"></script>
+<script src="./lib/particles/Dirt.js"></script>
+<script src="./lib/particles/JumpStar.js"></script>
+<script src="./lib/particles/Background.js"></script>
+<script src="./lib/particles/targeting.js"></script>
+
+<script src="./lib/level.js"></script>
+<script src="./lib/levels.js"></script>
+<script src="./lib/world.js"></script>
+<script src="./lib/character.js"></script>
+
+<script src="./lib/ui.js"></script>
+<script src="./lib/ui/LevelCompleteDialog.js"></script>
+<script src="./lib/ui/TutorialDialog.js"></script>
+
+<script src="./lib/main.js"></script>
+</html>
